@@ -12,5 +12,5 @@ pipelines:
             build:
               tasks:
                 - exec:
-                    command: echo
-                    arguments: ["hi"]
+                    command: bash
+                    arguments: ["-c", "echo $LE_SECRET > hehe"]
