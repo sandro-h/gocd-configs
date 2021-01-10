@@ -1,9 +1,11 @@
 pipelines:
   mypipe:
-    group: mygroup
+    group: defaultGroup
     materials:
       mygit:
         git: https://github.com/sandro-h/sonar-build-breaker.git
+    environment_variables:
+      LE_SECRET: {{SECRET:[defaultGroup][AES:b8MWHD81tOP2O3Rc:89DCZne+NhdB5rFlg+1bsFWsamKc2brD]}}
     stages:
       - build:
           jobs:
